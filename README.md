@@ -1,5 +1,4 @@
-# SubQuery - Starter Package
-
+A SubQuery starter package template for UnoRe's SubQuery node which will allow users to extract, transform, persist, and query data initially, as well as connect and present data in the future.
 
 The Starter Package is an example that you can use as a starting point for developing your SubQuery project.
 A SubQuery package defines which data The SubQuery will index from the substrate network, and how it will store it. 
@@ -101,20 +100,3 @@ Then, under the project directory run following command:
 ```
 $docker-compose up
 ```
-
-#### Query the project
-
-With the SubQuery project above deployed successfully, now in your docker container should have `subql-node`,`Postgres` and `Hasura/graphql-engine` running.
-
-Open your browser and head to `http://localhost:8080/console`.
-
-Under the `DATA` tab, on the left top corner select the schema you just created, it usually named `public`.
-Then you can see the table is currently untracked, click on the `Track` button.
-
-Finally, head to the `GRAPHQL` tab, in the explorer you should see the table is ready to query.
-
-##Redeploy a project
-
-If any changes to your SubQuery project require SubQuery node to reindex, it is necessary to repeat the above steps in [Configure your project](#configure-your-project).
-And reindex again starting with the genesis block.
-Also, restore a clean schema will ensure data stored correctly, go to Hasura console and under the `DATA` tab, select the corresponding schema and remove it.
